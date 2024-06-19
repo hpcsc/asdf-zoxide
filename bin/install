@@ -31,7 +31,7 @@ function download() {
 
     echo "=== Download from ${url} and install to ${install_path}"
     curl -L "${url}" | tar -zxvf - -C /tmp
-    mv -v /tmp/zoxide*/zoxide "${install_path}/bin/zoxide"
+    mv -v /tmp/zoxide "${install_path}/bin/zoxide"
     chmod +x "${install_path}/bin/zoxide"
     rm -vrf /tmp/zoxide*
 }
